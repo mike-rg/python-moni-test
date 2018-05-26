@@ -41,18 +41,18 @@ $ python manage.py createsuperuser
 
 ```
 
-#### CRUD
-#####List loans
+### CRUD
+####List loans
 <<server:port>>/loans/
 
-#####Create a new loan
+####Create a new loan
 <<server:port>>/loans/create/
 
-#####Update a loan
+####Update a loan
 <<server:port>>/loans/update/<id>
 
-#####Delete a loan
+####Delete a loan
 <<server:port>>/loans/delete/<id>
 
-#####Loan Detail
+####Loan Detail
 <<server:port>>/loans/detail/<id>
