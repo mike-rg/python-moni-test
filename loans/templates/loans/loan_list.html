@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Loan List{% endblock title %}
+{% block content %}
+    <h1>Loan List</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>DNI</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Amount</th>
+            <th>Approved</th>
+            <th>CreateAt</th>
+        </tr>
+        {% for loan in object_list %}
+        <tr>
+            <td>{{ loan.id }}</td>
+            <td>{{ loan.dni }}</td>
+            <td>{{ loan.firstname }}</td>
+            <td>{{ loan.lastname }}</td>
+            <td>{{ loan.gender }}</td>
+            <td>{{ loan.email }}</td>
+            <td>{{ loan.amount }}</td>
+            <td>{{ loan.approved }}</td>
+            <td>{{ loan.created_time }}</td>
+        </tr>
+        {% empty %}
+        <tr>Empty.</tr>
+        {% endfor %}
+    </table>
+{% endblock content %}
